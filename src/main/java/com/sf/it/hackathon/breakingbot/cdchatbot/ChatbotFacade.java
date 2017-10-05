@@ -11,11 +11,11 @@ import org.springframework.util.StringUtils;
 
 import com.sf.it.hackathon.breakingbot.knowledge.KnowledgeBuilder;
 import com.sf.it.hackathon.breakingbot.knowledge.PreprocessingUtil;
+import com.sf.it.hackathon.breakingbot.utils.BreakingBotConstant;
 
 @Component
 public class ChatbotFacade {
 	
-	private final String DEFAULT_RESULT ="Not Able to process your result as I can't undertand you";
 	private static String  	sInput = new String("");
 	private static boolean	bQuitProgram = false;
 	Context currentContext = new Context();
@@ -90,8 +90,8 @@ public class ChatbotFacade {
 			responseGen.setInputCategory(intent);
 		}
 		else{ // TBD: Chatbot is rude. Make him decent.
-			System.out.println(DEFAULT_RESULT);
-			return DEFAULT_RESULT;
+			System.out.println(BreakingBotConstant.DEFAULT_RESULT);
+			return BreakingBotConstant.DEFAULT_RESULT;
 		}
 		return responseGen.generateResponse(sInput);
 	}

@@ -10,6 +10,7 @@ import org.json.JSONObject;
 
 import com.sf.it.hackathon.breakingbot.knowledge.KnowledgeBuilder;
 import com.sf.it.hackathon.breakingbot.textmatching.TfIdfMain;
+import com.sf.it.hackathon.breakingbot.utils.BreakingBotConstant;
 
 public class ResponseGenerator {
 	
@@ -34,7 +35,10 @@ public class ResponseGenerator {
 	public String generateResponse(String sInput){
 		String response = null;
 		List<String>possibleResponses = new ArrayList<String>();
-		if(knowledge == null) System.out.println("knowledge is null");
+		if(knowledge == null) {
+			System.out.println("knowledge is null");
+			return BreakingBotConstant.DEFAULT_RESULT;
+		}
 		Iterator<?> keys = knowledge.keys();
 		
 		while(keys.hasNext()){
