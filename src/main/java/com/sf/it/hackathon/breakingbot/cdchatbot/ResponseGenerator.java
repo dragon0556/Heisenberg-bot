@@ -17,12 +17,12 @@ import com.sf.it.hackathon.breakingbot.utils.BreakingBotConstant;
 
 public class ResponseGenerator {
 	
-	JSONObject knowledge;
 	
-	public void setInputCategory(String intent){
+	
+	public JSONObject setInputCategory(String intent){
 		String knowledgeFileName = null;
 		String changedIntent = intent.trim().replace(" ", "_").toLowerCase().toLowerCase();
-		
+		JSONObject knowledge = null;;
 			knowledgeFileName = changedIntent + "_knowledge.json";
         // TBD: implement other categories too		
 		System.out.println("intent is "+ intent);
@@ -33,9 +33,11 @@ public class ResponseGenerator {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		return knowledge;
 	}
 	
-	public String generateResponse(String sInput){
+	public String generateResponse(String sInput, JSONObject knowledge){
 		String response = null;
 		List<String>possibleResponses = new ArrayList<String>();
 		if(knowledge == null) {
@@ -65,9 +67,6 @@ public class ResponseGenerator {
 			}
 			valList.add(str);
 			matchMap.put(match, valList);
-			//int match = DamerauLevenshtein.calculateDistance(str,sInput);
-			System.out.println("String is: "+ str);
-			System.out.println("Match is: "+ match);
 			if (match > maxMatch){
 				maxMatch = match;
 			}
@@ -77,8 +76,6 @@ public class ResponseGenerator {
 		
 		try {
 			response = (String)knowledge.get(responseMatch.replace(' ', '-').trim());
-			System.out.println(response);
-			knowledge = null;
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -92,8 +89,6 @@ public class ResponseGenerator {
 		int minMatch = Integer.MAX_VALUE;
 		for (String ele : matchList) {
 			int match = DamerauLevenshtein.calculateDistance(ele,sInput);
-			System.out.println("new String is: "+ ele);
-			System.out.println("new Match is: "+ match);
 			if(match < minMatch){
 				minMatch = match;
 				result = ele;

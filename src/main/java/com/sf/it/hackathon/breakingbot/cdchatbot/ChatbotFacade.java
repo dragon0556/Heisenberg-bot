@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
@@ -85,14 +86,14 @@ public class ChatbotFacade {
 		
 		//String category = InputPreprocessor.detectCategory(sInput);
 		
-		
+		JSONObject knowledge = null;
 		if (!StringUtils.isEmpty(intent)){
-			responseGen.setInputCategory(intent);
+			knowledge = responseGen.setInputCategory(intent);
 		}
 		else{ // TBD: Chatbot is rude. Make him decent.
 			System.out.println(BreakingBotConstant.DEFAULT_RESULT);
 			return BreakingBotConstant.DEFAULT_RESULT;
 		}
-		return responseGen.generateResponse(sInput);
+		return responseGen.generateResponse(sInput, knowledge);
 	}
 }
