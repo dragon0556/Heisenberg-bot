@@ -2,13 +2,16 @@ package com.sf.it.hackathon.breakingbot.cdchatbot;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.sf.it.hackathon.breakingbot.knowledge.KnowledgeBuilder;
+import com.sf.it.hackathon.breakingbot.textmatching.DamerauLevenshtein;
 import com.sf.it.hackathon.breakingbot.textmatching.TfIdfMain;
 import com.sf.it.hackathon.breakingbot.utils.BreakingBotConstant;
 
@@ -48,16 +51,28 @@ public class ResponseGenerator {
 		}
 		
 		// find the key with maximum match with user input
+		int minMatch = Integer.MAX_VALUE;
 		double maxMatch = Double.MIN_VALUE;
-		String responseMatch = null;
+		
+		Map<Double, List<String>> matchMap = new HashMap<>();
+		List<String> valList = null;;
 		for (String str : possibleResponses){
 			double match = TfIdfMain.cosineSimilarity(str, sInput);
+			valList = matchMap.get(match);
+			if(valList == null){
+				valList = new ArrayList<>();
+				
+			}
+			valList.add(str);
+			matchMap.put(match, valList);
+			//int match = DamerauLevenshtein.calculateDistance(str,sInput);
+			System.out.println("String is: "+ str);
+			System.out.println("Match is: "+ match);
 			if (match > maxMatch){
 				maxMatch = match;
-				responseMatch = str;
 			}
 		}
-		
+		String responseMatch = useDLAlgo(matchMap.get(maxMatch), sInput);
 	    
 		
 		try {
@@ -69,5 +84,21 @@ public class ResponseGenerator {
 		}
 		
 		return response;
+	}
+	
+	private String useDLAlgo(List<String> matchList, String sInput){
+		String result = null;
+		int minMatch = Integer.MAX_VALUE;
+		for (String ele : matchList) {
+			int match = DamerauLevenshtein.calculateDistance(ele,sInput);
+			System.out.println("new String is: "+ ele);
+			System.out.println("new Match is: "+ match);
+			if(match < minMatch){
+				minMatch = match;
+				result = ele;
+			}
+		}
+		
+		return result;
 	}
 }
