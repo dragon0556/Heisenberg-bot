@@ -15,6 +15,7 @@ import com.sf.it.hackathon.breakingbot.knowledge.PreprocessingUtil;
 @Component
 public class ChatbotFacade {
 	
+	private final String DEFAULT_RESULT ="Not Able to process your result as I can't undertand you";
 	private static String  	sInput = new String("");
 	private static boolean	bQuitProgram = false;
 	Context currentContext = new Context();
@@ -89,7 +90,8 @@ public class ChatbotFacade {
 			responseGen.setInputCategory(intent);
 		}
 		else{ // TBD: Chatbot is rude. Make him decent.
-			System.out.println("I dont know man what the hell you are talking about. I can only help you with CD team stuff.");
+			System.out.println(DEFAULT_RESULT);
+			return DEFAULT_RESULT;
 		}
 		return responseGen.generateResponse(sInput);
 	}
