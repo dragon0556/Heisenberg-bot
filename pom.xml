@@ -80,24 +80,24 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/stanford-corenlp-3.8.0-javadoc.jar</systemPath>
 		</dependency> 
-		 <dependency>
+		<!--  <dependency>
 			<groupId>edu.stanford.nlp1</groupId>
 			<artifactId>stanford-corenlpl-1</artifactId>
 			<version>3.8.0</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/stanford-corenlp-3.8.0-models.jar</systemPath>
-		</dependency>
+		</dependency> -->
 		<dependency>
     <groupId>edu.stanford.nlp</groupId>
     <artifactId>stanford-corenlp</artifactId>
     <version>3.8.0</version>
 </dependency>
-<!-- <dependency>
+<dependency>
     <groupId>edu.stanford.nlp</groupId>
     <artifactId>stanford-corenlp</artifactId>
     <version>3.8.0</version>
     <classifier>models</classifier>
-</dependency> -->
+</dependency>
 		<dependency>
 			<groupId>edu.stanford.nlp2</groupId>
 			<artifactId>stanford-corenlpl-2</artifactId>
