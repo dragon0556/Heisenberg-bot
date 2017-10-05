@@ -1,0 +1,10 @@
+CD_tigerteam located at hyderabad.
+CD_tigerteam it-cd-hyd-fte@salesforce.com (mailto:it-cd-hyd-fte@salesforce.com) is the email address to communicate. 
+CD_tigerteam Is an awesome team.
+CD_tigerteam Maintains CD team infrastructure in salesforce
+CD_tigerteam Product owner is Ashwin Reddy
+Jenkins_access_views I need to create views in jenkins. 
+Jenkins_access_configure I need access to configure jobs in jenkins.
+Jenkins_infra_query jenkins.com (http://jenkins.com/) is the URL of the production
+Jenkins_general_query Jenkins maintenance is performed every 2 months.
+

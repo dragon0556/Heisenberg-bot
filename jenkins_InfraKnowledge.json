@@ -1,0 +1,17 @@
+{
+	'url-of-production-jenkin':"The URL of production jenkins is www.jenkins.internal.salesforce.com",
+	'url-of-staging-jenkin':"The URL of staging jenkins is www.jenkins-stage.internal.salesforce.com",
+	'url-of-development-jenkin':"The URL of development jenkins is www.jenkins-dev.internal.salesforce.com",
+	'default-user-privilages-jenkin':"Jenkins leverages Salesforce's implementation of ActiveDirectory, so you can login with read access using your Salesforce user account.You need extend privileges to create a job.  To request privileges to create new jobs please email us at it-cd@salesforce.com. These extended privileges are granted to only two individual under a manager.",
+	'next-jenkin-maintenance':"Jenkins maintenance is performed every two months. Next one is tomorrow.",
+	'scheduled-jenkin-maintenance':"Jenkins maintenance is performed every two months. Next one is tomorrow.",
+	'team-supports-jenkin':"CD team supports jenkins instance. You can contact them at itcd@salesforce.com",
+	'jenkin-infrastructure-look-like':"Our Jenkins production infrastructure comprises of 1 master and 31 slaves running on VMs.  Our VMs run Jenkins Enterprise from Cloudbees",
+	'jenkin-infra-look-like':"Our Jenkins production infrastructure comprises of 1 master and 31 slaves running on VMs.  Our VMs run Jenkins Enterprise from Cloudbees",
+	'access-to-jenkin':"Jenkins leverages Salesforce's implementation of ActiveDirectory, so you can login at https://jenkins.internal.salesforce.com/ using your Salesforce SSO login.",
+    'privileges-by-default-jenkin':"By default, users will only have 'view' permissions for the Jenkins jobs.  Additional perms can be granted by a jenkins job owner.",
+    'permissions-by-default-jenkin':"By default, users will only have 'view' permissions for the Jenkins jobs.  Additional perms can be granted by a jenkins job owner.",
+    'process-create-new-jobs-jenkin':"We are strong believers in making teams independent and follow a self service model in managing jenkins. We provide job creation access to two member per manager. In order to get this access, raise a request with the CD team for approval - (https://sites.google.com/a/salesforce.com/continuousdelivery/home/continuous-delivery-assistance) to be added to the cdjenkins-job-managers active directory.",
+    'create-new-jobs-jenkin':"We are strong believers in making teams independent and follow a self service model in managing jenkins. We provide job creation access to two member per manager. In order to get this access, raise a request with the CD team for approval - (https://sites.google.com/a/salesforce.com/continuousdelivery/home/continuous-delivery-assistance) to be added to the cdjenkins-job-managers active directory."
+
+}

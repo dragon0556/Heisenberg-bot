@@ -1,0 +1,50 @@
+CD_tigerteam located at hyderabad.
+CD_tigerteam it-cd-hyd-fte@salesforce.com (mailto:it-cd-hyd-fte@salesforce.com) is the email address to communicate.
+CD_tigerteam Is an awesome team.
+CD_tigerteam Maintains CD team infrastructure in salesforce
+CD_tigerteam Product owner is Ashwin Reddy
+Jenkins_infra_query I need to create views in jenkins.
+Jenkins_infra_query I need access to configure jobs in jenkins.
+Jenkins_infra_query What is the URL of the production jenkins?
+Jenkins_infra_query What is the URL of the production jenkins environment?
+Jenkins_infra_query What is the URL of the staging jenkins environment?
+Jenkins_infra_query What is the URL of the staging jenkins?
+Jenkins_infra_query What is the URL of the dev jenkins environment?
+Jenkins_infra_query What is the URL of the development jenkins environment?
+Jenkins_infra_query What does our Jenkins infrastructure look like?
+Jenkins_infra_query Do i have access to Jenkins?
+Jenkins_infra_query What privileges do I have by default to Jenkins?
+Jenkins_infra_query Jenkins maintenance is performed every 2 months.
+Jenkins_infra_query What do I need to do if I want to create new jobs in jenkins? 
+Jenkins_infra_query Why only two people per manager to create jobs in jenkins?
+Jenkins_infra_query What if I need a specific Runtime, tooling or new plugin for my jobs in jenkins?
+Jenkins_infra_query What is the recommended polling frequency for my job in jenkins? 
+Jenkins_infra_query My job hits an external/internal endpoint and Jenkins is unable to access it. How do I get it whitelisted?
+Jenkins_infra_query My build is getting stuck, how do I kill my build after a certain time?
+Jenkins_infra_query How to configure my jenkins job that execute python?
+Jenkins_infra_query How can Jenkins job post to a chatter group?
+Jenkins_infra_query What is the default build timeout for a jenkins job?
+Grand_unified_system work Item
+Grand_unified_system bug
+Grand_unified_system error
+Grand_unified_system create a bug on GUS
+Grand_unified_system SLA
+Grand_unified_system Service level agreement
+Grand_unified_system Customer Request
+Grand_unified_system Internal Request
+Grand_unified_system CR
+Grand_unified_system IR
+Grand_unified_system Priority Delivery - 10% of Backlog - Start to Close is 2 days 90% of the time
+Grand_unified_system Standard SLA - 55% of Backlog - Start to Close is 5 days 80% of the time
+Grand_unified_system Low Priority SLA - 15% of Backlog - Start to Close is 10 days 75% of the time
+Grand_unified_system Fixed Date Delivery - 20% of Backlog - of the timeStart to Close is 20 days 85%
+Nexus_Server What Is Nexus?
+Nexus_Server Nexus is an artifact (jar, war, ear) repository. 
+Nexus_Server How To Search For Artifacts in Nexus
+Nexus_Server How To Deploy Artifacts to IT nexus
+Nexus_Server Deploy Artifacts
+Nexus_Server Deploying Many Artifacts
+Nexus_Server How to Use Maven to automatically deploy artifacts to Nexus.
+Nexus_Server Nexus provides a REST API to automatically store and retrieve artifacts.  
+Nexus_Server How to Search for a keyword of an artifact name in a specific repository
+Nexus_Server How to Search for a particular artifact in all repositories
