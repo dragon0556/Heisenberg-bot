@@ -78,6 +78,7 @@ public class ResponseGenerator {
 		try {
 			response = (String)knowledge.get(responseMatch.replace(' ', '-').trim());
 			System.out.println(response);
+			knowledge = null;
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
