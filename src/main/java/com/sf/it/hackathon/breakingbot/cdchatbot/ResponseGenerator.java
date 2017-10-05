@@ -23,7 +23,7 @@ public class ResponseGenerator {
 		String knowledgeFileName = null;
 		String changedIntent = intent.trim().replace(" ", "_").toLowerCase().toLowerCase();
 		
-			knowledgeFileName = changedIntent + "_InfraKnowledge.json";
+			knowledgeFileName = changedIntent + "_knowledge.json";
         // TBD: implement other categories too		
 		System.out.println("intent is "+ intent);
 		System.out.println("knowledge file is "+ knowledgeFileName);
