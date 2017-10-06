@@ -22,9 +22,11 @@ public class SignonHandler {
 	
 	static String getSignonMessage() throws JSONException{
 		
-		Random rand = new Random();
+		/*Random rand = new Random();
 		JSONArray signonMessages = KnowledgeBuilder.knowledge.getJSONArray("signOnMessages");
 		int index = rand.nextInt(signonMessages.length()-1);
-		return signonMessages.getString(index);
+		return signonMessages.getString(index);*/
+		
+		return null;
 	}
 }

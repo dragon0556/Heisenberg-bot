@@ -13,9 +13,8 @@ import org.json.JSONObject;
 
 public class KnowledgeBuilder {
 	
-	public static JSONObject knowledge;
-	public static JSONObject loadKnowledge(String fileName) throws IOException, JSONException{
-		
+	public  JSONObject loadKnowledge(String fileName) throws IOException, JSONException{
+		JSONObject knowledge = null;
 		File f = new File(fileName);
         if (f.exists()){
             InputStream is = new FileInputStream(fileName);

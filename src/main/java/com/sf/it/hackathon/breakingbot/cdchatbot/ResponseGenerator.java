@@ -28,7 +28,7 @@ public class ResponseGenerator {
 		System.out.println("intent is "+ intent);
 		System.out.println("knowledge file is "+ knowledgeFileName);
 		try {
-			knowledge = KnowledgeBuilder.loadKnowledge(knowledgeFileName);
+			knowledge = new KnowledgeBuilder().loadKnowledge(knowledgeFileName);
 		} catch (IOException | JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
